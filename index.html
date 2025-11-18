@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Princess Day Wishes for Shub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Princess Day Wishes for Shub</h1>
+    </header>
+
+    <main>
+      <section class="qr-section">
+        <h2>Your portal QR</h2>
+        <div id="qrcode"></div>
+        <p class="hint">Scan this to open the portal on any phone.</p>
+      </section>
+
+      <section class="scanner-section">
+        <h2>Scan a QR code</h2>
+        <div class="scanner-controls">
+          <button id="start-scan">Start scan</button>
+          <button id="stop-scan" disabled>Stop scan</button>
+        </div>
+        <div class="scanner-view">
+          <video id="video" playsinline></video>
+          <canvas id="canvas" hidden></canvas>
+        </div>
+        <div class="scan-result">
+          <p><strong>Result:</strong> <span id="scan-output">—</span></p>
+          <p id="scan-link-wrap" hidden>
+            <a id="scan-link" href="#" target="_blank" rel="noopener">Open link</a>
+          </p>
+        </div>
+        <div class="scanner-upload">
+          <p><strong>Or upload a QR image:</strong></p>
+          <input type="file" id="file-input" accept="image/*" />
+        </div>
+      </section>
+
+      <section class="quiz-section">
+        <h2>Friendship Quiz</h2>
+        <div id="quiz-container"></div>
+      </section>
+
+      <section class="certificate-section">
+        <h2>CERTIFICATE OF UNESCAPABLE FRIENDSHIP</h2>
+        <p>This certifies that Shub</p>
+        <p>is now forcefully enrolled into this fabulous friendship.</p>
+        <p>Escape is no longer an option.</p>
+        <p>👑💗✨</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- QR code generator -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/dist/qrcode.min.js"></script>
+  <!-- QR decoder (jsQR) -->
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
